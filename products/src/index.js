@@ -7,4 +7,4 @@ for (let i = 0; i < 10; i++) {
   products += `<div><h3>${name}</h3></div>`
 }
 
-document.getElementById('root').innerHTML = products
+document.getElementById('root-products').innerHTML = products
