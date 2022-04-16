@@ -1,5 +1,5 @@
 # dependencies
-/dist
+**/*/dist
 **/*/node_modules
 /.pnp
 .pnp.js
