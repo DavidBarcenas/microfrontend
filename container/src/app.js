@@ -1,11 +1,11 @@
 import React from 'react'
-import { mount } from 'landing/app'
-
-console.log(mount)
+import LandingApp from './components/landing-app'
 
 function App() {
   return (
-    <div>App</div>
+    <div>
+      <h1>Container</h1>
+      <LandingApp /></div>
   )
 }
 

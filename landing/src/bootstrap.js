@@ -4,8 +4,10 @@ import App from './app';
 
 // Mount function to start up the app
 const mount = (el) => {
-  const root = createRoot(el);
-  root.render(<App />);
+  if(el) {
+    const root = createRoot(el);
+    root.render(<App />);
+  }
 }
 
 // If we are in development and in isolation,
