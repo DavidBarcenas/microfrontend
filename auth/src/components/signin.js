@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Signin() {
   return (
@@ -10,7 +11,8 @@ function Signin() {
         <label htmlFor="Remember me"></label>
         <button>Sign in</button>
       </form>
-      <a href="">Don't have an account? Sign Up</a>
+      <a href="">Don't have an account? </a>
+      <Link to="/auth/signup">Sign Up</Link>
       <footer>
         <p>Copyright © Microfrontend 2022</p>
       </footer>
