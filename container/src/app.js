@@ -1,17 +1,21 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import AuthApp from './components/auth-app';
 import Header from './components/header'
-import LandingApp from './components/landing-app'
 
+const AuthLazy = lazy(() => import('./components/auth-app'))
+const LandingLazy = lazy(() => import('./components/landing-app'))
+
+// TODO: Create loading component
 function App() {
   return (
     <BrowserRouter>
       <Header />
-      <Routes>
-        <Route path="auth" element={<AuthApp />} />
-        <Route path="/" element={<LandingApp />} />
-      </Routes>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<LandingLazy />} />
+          <Route path="auth" element={<AuthLazy />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   )
 }
