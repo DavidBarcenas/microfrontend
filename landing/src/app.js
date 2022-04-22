@@ -1,17 +1,16 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-import { unstable_HistoryRouter as HistoryRouter } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Landing from './components/landing';
 import Pricing from './components/pricing';
 
-function App({history}) {
+function App() {
   return (
-    <HistoryRouter history={history}>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="pricing" element={<Pricing />} />
       </Routes>
-    </HistoryRouter>
+    </BrowserRouter>
   )
 }
 

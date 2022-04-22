@@ -1,15 +1,12 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { createBrowserHistory } from "history";
 import App from './app';
-
-const history = createBrowserHistory({ window });
 
 // Mount function to start up the app
 const mount = (el) => {
   if(el) {
     const root = createRoot(el);
-    root.render(<App history={history} />);
+    root.render(<App />);
   }
 }
 
