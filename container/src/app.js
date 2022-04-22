@@ -1,11 +1,13 @@
 import React from 'react'
+import Header from './components/header'
 import LandingApp from './components/landing-app'
 
 function App() {
   return (
-    <div>
-      <h1>Container</h1>
-      <LandingApp /></div>
+    <>
+      <Header />
+      <LandingApp />
+    </>
   )
 }
 
