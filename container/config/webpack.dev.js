@@ -19,6 +19,7 @@ const devConfig = {
       name: 'container',
       remotes: {
         'landing': 'landing@http://localhost:8081/remoteEntry.js',
+        'auth': 'auth@http://localhost:8082/remoteEntry.js',
       },
       shared: packageJson.dependencies,
     }),
