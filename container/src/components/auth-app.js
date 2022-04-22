@@ -1,11 +1,15 @@
 import React, { useEffect, useRef } from 'react'
 import { mount } from 'auth/app'
 
-function AuthApp() {
+function AuthApp({onLoggedIn}) {
   const ref = useRef(null)
 
   useEffect(() => {
-    mount(ref.current)
+    mount(ref.current, {
+      onSignIn: () => {
+        onLoggedIn()
+      }
+    })
   }, [])
 
   return (

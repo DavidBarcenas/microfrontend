@@ -3,10 +3,10 @@ import { createRoot } from 'react-dom/client';
 import App from './app';
 
 // Mount function to start up the app
-const mount = (el) => {
+const mount = (el, {onSignIn} = {}) => {
   if(el) {
     const root = createRoot(el);
-    root.render(<App />);
+    root.render(<App onSignIn={onSignIn} />);
   }
 }
 

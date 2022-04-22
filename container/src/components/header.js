@@ -1,8 +1,9 @@
 import React from 'react'
+import { Link} from 'react-router-dom';
 
-function Header() {
+function Header({isSignedIn}) {
   return (
-    <div>Header <button>Login</button></div>
+    <div>Header <Link to="/auth">{isSignedIn ? 'Logout' : 'Login'}</Link></div>
   )
 }
 
