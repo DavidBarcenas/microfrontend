@@ -9,7 +9,10 @@ export default {
 </script>
 
 <template>
-  <button @click="count++">Count is: {{ count }}</button>
+  <div>
+    <h1>Vue Dashboard</h1>
+    <button @click="count++">Count is: {{ count }}</button>
+  </div>
 </template>
 
 <style scoped>

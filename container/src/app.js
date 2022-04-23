@@ -4,6 +4,7 @@ import Header from './components/header'
 
 const AuthLazy = lazy(() => import('./components/auth-app'))
 const LandingLazy = lazy(() => import('./components/landing-app'))
+const DashboardLazy = lazy(() => import('./components/dashboard-app'))
 
 // TODO: Create loading component
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingLazy />} />
           <Route path="auth" element={<AuthLazy onLoggedIn={() => setIsSignedIn(true)} />} />
+          <Route path="dashboard" element={<DashboardLazy />} />
         </Routes>
       </Suspense>
     </BrowserRouter>
