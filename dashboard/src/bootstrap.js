@@ -1,12 +1,11 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import App from './app';
+import { createApp } from 'vue'
+import Dashboard from './components/dashboard.vue'
+
 
 // Mount function to start up the app
 const mount = (el) => {
   if(el) {
-    const root = createRoot(el);
-    root.render(<App />);
+    createApp(Dashboard).mount(el)
   }
 }
 
